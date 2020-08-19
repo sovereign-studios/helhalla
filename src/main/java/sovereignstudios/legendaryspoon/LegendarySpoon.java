@@ -2,8 +2,8 @@ package sovereignstudios.legendaryspoon;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
-import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -15,11 +15,10 @@ public class LegendarySpoon extends Game {
     private Texture coinImage;
 
     public static void main(String[] args) {
-        LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-        config.title = "Legendary Spoon";
-        config.width = 800;
-        config.height = 600;
-        new LwjglApplication(new LegendarySpoon(), config);
+        Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
+        config.setTitle("Legendary Spoon");
+        config.setWindowedMode(800, 600);
+        new Lwjgl3Application(new LegendarySpoon(), config);
     }
 
     @Override

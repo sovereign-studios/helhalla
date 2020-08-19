@@ -12,13 +12,13 @@ repositories {
 
 ext {
     ashleyVersion = "1.7.3"
-    gdxVersion = "1.9.10"
+    gdxVersion = "1.9.11"
 }
 
 dependencies {
     implementation "com.badlogicgames.ashley:ashley:$ashleyVersion"
 
-    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
     implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
 
     testImplementation 'junit:junit:4.12'
@@ -27,6 +27,6 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClassName = 'sovereignstudios.legendaryspoon.LegendarySpoon'
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 14
+    targetCompatibility = 14
 }
