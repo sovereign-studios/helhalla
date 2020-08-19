@@ -1,4 +1,4 @@
-package sovereignstudios.legendaryspoon;
+package sovereignstudios.helhalla;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -9,16 +9,16 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class LegendarySpoon extends Game {
+public class Helhalla extends Game {
     private OrthographicCamera camera;
     private SpriteBatch batch;
     private Texture coinImage;
 
     public static void main(String[] args) {
         Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-        config.setTitle("Legendary Spoon");
+        config.setTitle("Helhalla");
         config.setWindowedMode(800, 600);
-        new Lwjgl3Application(new LegendarySpoon(), config);
+        new Lwjgl3Application(new Helhalla(), config);
     }
 
     @Override
