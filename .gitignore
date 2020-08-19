@@ -28,6 +28,9 @@ hs_err_pid*
 # Ignore Gradle build output directory
 build
 
+# Allow Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
 # IntelliJ IDEA files
 .idea/
 
