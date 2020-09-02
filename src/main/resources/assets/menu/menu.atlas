@@ -1,0 +1,41 @@
+
+menu.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+menu_background
+  rotate: false
+  xy: 2, 119
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+menu_credits_btn
+  rotate: false
+  xy: 2, 44
+  size: 164, 35
+  orig: 164, 35
+  offset: 0, 0
+  index: -1
+menu_play_btn
+  rotate: false
+  xy: 1924, 1164
+  size: 107, 35
+  orig: 107, 35
+  offset: 0, 0
+  index: -1
+menu_quit_btn
+  rotate: false
+  xy: 2, 2
+  size: 96, 40
+  orig: 96, 40
+  offset: 0, 0
+  index: -1
+menu_settings_btn
+  rotate: false
+  xy: 2, 81
+  size: 187, 36
+  orig: 187, 36
+  offset: 0, 0
+  index: -1

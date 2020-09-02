@@ -1,18 +1,21 @@
 package sovereignstudios.helhalla;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Logger;
+import sovereignstudios.helhalla.screens.loading.loadingScreen;
 
 public class Helhalla extends Game {
-    private OrthographicCamera camera;
     private SpriteBatch batch;
-    private Texture coinImage;
+    private AssetManager assetManager;
 
     public static void main(String[] args) {
         Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
@@ -23,28 +26,27 @@ public class Helhalla extends Game {
 
     @Override
     public void create() {
-        camera = new OrthographicCamera();
-        camera.setToOrtho(false, 800, 600);
+        Gdx.app.setLogLevel(Application.LOG_DEBUG);
+
+        assetManager = new AssetManager();
+        assetManager.getLogger().setLevel(Logger.DEBUG);
 
         batch = new SpriteBatch();
-        coinImage = new Texture("coin.png");
-    }
 
-    @Override
-    public void render() {
-        Gdx.gl.glClearColor(0, 0, 0.2f, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        camera.update();
-
-        batch.setProjectionMatrix(camera.combined);
-        batch.begin();
-        batch.draw(coinImage, 10, 10, 400, 371);
-        batch.end();
+        setScreen(new loadingScreen(this));
     }
 
     @Override
     public void dispose() {
         batch.dispose();
-        coinImage.dispose();
+        assetManager.dispose();
+    }
+
+    public AssetManager getAssetManager() {
+        return assetManager;
+    }
+
+    public SpriteBatch getBatch() {
+        return batch;
     }
 }
