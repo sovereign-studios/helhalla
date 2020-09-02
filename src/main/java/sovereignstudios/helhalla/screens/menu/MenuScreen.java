@@ -13,14 +13,15 @@ import com.badlogic.gdx.utils.Logger;
 import sovereignstudios.helhalla.Helhalla;
 import sovereignstudios.helhalla.assets.AssetDescriptors;
 import sovereignstudios.helhalla.assets.RegionNames;
+import sovereignstudios.helhalla.screens.game.GameScreen;
 
 
-public class menuScreen extends menuScreenBase {
+public class MenuScreen extends MenuScreenBase {
 
-    private static final Logger log = new Logger(menuScreen.class.getName(), Logger.DEBUG);
+    private static final Logger log = new Logger(MenuScreen.class.getName(), Logger.DEBUG);
 
 
-    public menuScreen(Helhalla game) {
+    public MenuScreen(Helhalla game) {
         super(game);
     }
 
@@ -79,7 +80,7 @@ public class menuScreen extends menuScreenBase {
         return table;
     }
     private void play() {
-//        game.setScreen(new gameScreen(game));
+        game.setScreen(new GameScreen(game));
     }
 
 

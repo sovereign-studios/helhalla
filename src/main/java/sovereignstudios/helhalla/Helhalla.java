@@ -6,12 +6,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Logger;
-import sovereignstudios.helhalla.screens.loading.loadingScreen;
+import sovereignstudios.helhalla.screens.loading.LoadingScreen;
 
 public class Helhalla extends Game {
     private SpriteBatch batch;
@@ -33,7 +30,7 @@ public class Helhalla extends Game {
 
         batch = new SpriteBatch();
 
-        setScreen(new loadingScreen(this));
+        setScreen(new LoadingScreen(this));
     }
 
     @Override

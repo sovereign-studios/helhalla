@@ -9,10 +9,10 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import sovereignstudios.helhalla.Helhalla;
 import sovereignstudios.helhalla.assets.AssetDescriptors;
 import sovereignstudios.helhalla.config.GameConfig;
-import sovereignstudios.helhalla.screens.menu.menuScreen;
+import sovereignstudios.helhalla.screens.menu.MenuScreen;
 import sovereignstudios.helhalla.util.GdxUtils;
 
-public class loadingScreen extends ScreenAdapter {
+public class LoadingScreen extends ScreenAdapter {
 
     //== Constants
     private static final float PROGRESS_BAR_WIDTH = GameConfig.HUD_WIDTH / 2f; // World units
@@ -33,7 +33,7 @@ public class loadingScreen extends ScreenAdapter {
 
     //== Constructor
 
-    public loadingScreen(Helhalla game) {
+    public LoadingScreen(Helhalla game) {
         this.game = game;
         assetManager = game.getAssetManager();
     }
@@ -54,7 +54,7 @@ public class loadingScreen extends ScreenAdapter {
         renderer.end();
 
         if (changeScreen) {
-            game.setScreen(new menuScreen(game));
+            game.setScreen(new MenuScreen(game));
         }
     }
 

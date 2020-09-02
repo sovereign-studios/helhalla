@@ -11,7 +11,7 @@ import sovereignstudios.helhalla.Helhalla;
 import sovereignstudios.helhalla.config.GameConfig;
 import sovereignstudios.helhalla.util.GdxUtils;
 
-public abstract class menuScreenBase extends ScreenAdapter {
+public abstract class MenuScreenBase extends ScreenAdapter {
 
     protected final Helhalla game;
     protected final AssetManager assetManager;
@@ -19,7 +19,7 @@ public abstract class menuScreenBase extends ScreenAdapter {
     private Viewport viewport;
     private Stage stage;
 
-    public menuScreenBase(Helhalla game) {
+    public MenuScreenBase(Helhalla game) {
         this.game = game;
         assetManager = game.getAssetManager();
     }

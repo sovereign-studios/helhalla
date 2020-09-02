@@ -11,10 +11,10 @@ public class GameConfig {
 //
     public static final float HUD_WIDTH = 1366f; // World units
     public static final float HUD_HEIGHT = 786f; // World units
-//
-//    public static final float WORLD_WIDTH = 6.0f; // World units
-//    public static final float WORLD_HEIGHT = 10.0f; // World units
-//
+
+    public static final float WORLD_WIDTH = 6.0f; // World units
+    public static final float WORLD_HEIGHT = 10.0f; // World units
+
 //    public static final float WORLD_CENTRE_X = WORLD_WIDTH / 2F;
 //    public static final float WORLD_CENTRE_Y = WORLD_HEIGHT / 2F;
 
